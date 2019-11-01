@@ -1,0 +1,23 @@
+/* pages/setaddr/setaddr.wxss */
+@import '../../common/css/common.wxss';
+page{ background: #f2f6ff;}
+.mainpage{ height: 100vh}
+.mapbox{ height: 100%}
+.map{ height: 100%; width: 100%;}
+.addr-box{ display: flex; position: fixed; left: 0; bottom: 10px; width: 100%; overflow: hidden}
+.addr-main{ background: #fff; margin: 0 0.6em; padding: 0.8em 0.6em; display: flex; flex: 1; align-items: center; box-shadow:2px 2px 3px #aaaaaa; }
+.addr-txt{ display: flex; flex: 1; white-space:normal}
+.surebtn{ color: #ff8033;padding-left: 0.6em}
+/*搜索头部*/
+.search_top{ background: #fff; width: 100%; overflow: hidden; z-index: 200; box-shadow: 0 3px 2px #cdcdcd; height: 50px}
+.search_line{ height: 1em; width: 1px; background: #f29c5a;}
+.search_clear{ width: 1.5em; height: 1.5em}
+.uinput{ padding: 5px 10px;}
+.search_content{  padding-top: 2.7em; margin: 0 0.6em; overflow: hidden;}
+.content_stop{ padding: 0.5em; padding-bottom: 1em; background: #fff;}
+.topline{ display: flex;height: 1px; width: 100%; background: #e1e1e1;}
+.listbox{display: flex; position: fixed; z-index: 999; left: 0; top: 50px; flex: 1; flex-direction: column;  background: #fff; height: auto; width: 100%}
+.searchlist{ display: flex; flex-direction: column; flex: 1 }
+.search-item{ display: flex; flex-direction: column; padding: 0.6em 0.6em 0 0.6em; }
+.item-line{ width: 100%; display: flex; height: 1px; background: #e1e1e1; margin-top: 0.6em}
+.curloact{ position: fixed; right: 10px; top: 48%; width: 30px; height: 30px;}

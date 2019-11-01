@@ -1,0 +1,33 @@
+<!--pages/order/order.wxml-->
+<view class="um-vp mainpage bc-text">
+	<view class="ub ub-ac ub-pc month-check">
+		<view class="ub ub-ac ub-pc">
+			<picker class="ub ub-ac" mode="date" value="{{date}}" fields='month' bindchange="bindDateChange">
+				<view class="ub picker">
+					<text>当前选择: {{date}}</text>
+					<text class="bottomhead umar-l"></text>
+				</view>
+			</picker>
+		</view>
+	</view>
+	<view class="ub ub-ver order-list">
+		<navigator class="ub ub-ac order-item" url='../orderdetail/orderdetail'>
+			<view class="ub ub-ac">2015年09月09日</view>
+			<view class="ub ub-ac ub-f1 right-icon">
+				<text>0</text>单
+			</view>
+			<view class="ub ub-ac ">
+				<text class="righthead"></text>
+			</view>
+		</navigator> 
+		<navigator class="ub ub-ac order-item" url='../orderdetail/orderdetail'>
+			<view class="ub ub-ac">2015年09月09日</view>
+			<view class="ub ub-ac ub-f1 right-icon">
+				<text>0</text>单
+			</view>
+			<view class="ub ub-ac ">
+				<text class="righthead"></text>
+			</view>
+		</navigator> 
+	</view>
+</view>

@@ -1,0 +1,39 @@
+/* pages/pickup/pickup.wxss */
+@import '../../common/css/common.wxss';
+page{ background: #f2f6ff; }
+cover-view{ display: block; white-space: normal;}
+.toptips{ position: fixed; left: 0; top: 0; background: #fff; width: 100%; padding: 0.8em 0.6em; display: flex}
+.pickup-bottom{ position: fixed; left: 0; bottom: 0; width: 100%;}
+.pickup-inforbox{ background: #fff; margin: 0 0.6em 0.8em 0.6em;  box-shadow:2px 2px 3px #aaaaaa; padding: 0.6em; display: flex; flex: 1; flex-direction: row; align-items: center; justify-content: center}
+.inforbox-left{ display: flex;  flex-direction: column; width: 60px; margin-right: 0.5em; justify-content: center; align-items: center; flex: 1 }
+.circle-box{display: inline-flex;}
+.green-circle{ background: #00CC66; padding: 4px; border-radius: 50%; display: flex; font-size: 10px;  }
+.red-circle{ background: #ff8033;padding: 4px; border-radius: 50%;  display: flex; }
+.addrbox{ display: flex; flex-direction: column; flex: 5; }
+.addr-item{ display: inline-flex; flex-direction: row; align-items: center;  font-size: 14px}
+.addr-txt{ display: flex; flex-wrap: wrap; flex: 1;}
+.telbg{ width: 24px; height: 24px;}
+.toptipstxt{padding-left: 0.6em; line-height: 24px }
+.telbg-box{ padding-right:1.6em }
+.bottom-box{ display: flex; flex: 1;align-items: center; justify-content: center }
+.pickup-btn{ background: #ff8033; color: #fff;flex-grow: 2; text-align: center; line-height: 45px }
+.nav-btn{ background: #fff;  color: #5d5d5d;  text-align: center; flex-grow: 1; height: 45px; line-height: 45px;  justify-content: center}
+.nav-txt{display: inline-flex; align-items: center; justify-content: center;  }
+.nav-img{display: inline-flex; width: 26px; height: 26px; margin-top: 10px }
+.pickup-way{ display: flex; flex: 1; background: rgba(255,255,255,0.5); margin: 0 0.6em; padding: 0.6em 0;justify-content: center; align-items: center}
+.way-left{ display: flex;flex-grow: 1; justify-content: center; text-align: center}
+.way-right{display: flex;flex-grow: 1; justify-content: center; text-align: center}
+.mapHeight {
+  display: flex;
+  flex-direction: column;
+}
+.map {
+  flex: 1;
+  height: 100vh;
+  width: 100%;
+}
+.starttime{display: flex; justify-content: center; text-align: center;}
+.timeline{ display: flex; height: 1px; background: #e1e1e1; margin: 0.4em 0 0.5em 0}
+.endtime{display: flex; justify-content: center; text-align: center;}
+.timebox{ display: flex; flex-direction: column}
+.reload-btn{ position: fixed; right: 10px; top: 48%; width: 30px; height: 30px}

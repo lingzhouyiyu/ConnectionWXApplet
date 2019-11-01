@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "neworder": "../../components/neworder/neworder"
+  },
+  "navigationBarTitleText": "来云游司机端 首页",
+	"enablePullDownRefresh": true
+}

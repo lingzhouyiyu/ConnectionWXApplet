@@ -1,0 +1,14 @@
+/* pages/personal/personal.wxss */
+@import '../../common/css/common.wxss';
+page{ background: #f2f6ff;}
+.personal-top{ background: #fff; padding: 1.5em 0.6em; margin-bottom: 0.5em;}
+.header-img{ width: 80px; height: 80px; border-radius: 50%; border: 1px solid #E1E1E1; margin-right: 0.5em;}
+.personbar-img{ width: 2.2em; height: 2.2em;}
+.personal-bar{ background: #fff; padding: 0.6em 0;}
+.personal-bar02{ margin-bottom: 0.5em;}
+.personal-item{ background: #fff; padding:0 0.6em; height: 3em; margin-bottom: 1px;}
+.helepbox{ background: #fff; margin-top: 0.5em; padding: 0 0.6em;}
+.help-top{ height: 2.8em; border-bottom: 1px solid #E1E1E1;}
+.help-bg{ background: #48526b; width: 4px; height: 12px; margin-right: 10px;}
+.help-list{ padding: 1em 0;}
+.help-img{ width: 2em; height: 2em;}

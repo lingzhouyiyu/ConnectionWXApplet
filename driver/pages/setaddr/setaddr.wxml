@@ -1,0 +1,48 @@
+<!--pages/setaddr/setaddr.wxml-->
+<view class='um-vp mainpage bc-text'>
+  <view class="search_top ub">
+    <view class="ub ub-ac ub-f1">
+      <view class="ub ub-ac umar-l umar-r colgloden">搜索</view>
+      <view class="ub search_line marr06 marl06"></view>
+      <view class="ub ub-f1 uinput">
+        <input type='text' placeholder='请输入地址' bindinput="getsuggest" value='{{inputValue}}'></input>
+      </view>
+      <view class="ub ub-ac search_putclear" bindtap='clearInputEvent'>
+        <image class="ub ub-img search_clear" src="../../common/images/close_img01.png"></image>
+      </view>
+      <view class="ub search_line marl06"></view>
+      <view class="ub ub-ac marl06  marr06 sc-text search_exit" bindtap='closepage'>取消</view>
+    </view>
+  </view>
+  <view class='mapbox'>
+    <map id="mapselect" longitude="{{longitude}}" latitude="{{latitude}}" scale="15" controls="{{controls}}" markers="{{markers}}" show-location bindcontroltap="controltap" polyline="{{polyline}}" bindmarkertap="markertap" circles="{{circles}}" bindregionchange="regionchange"
+      class='map'>
+    </map>
+  </view>
+  <cover-image class="curloact" bindtap='my_location' src="../../common/images/getloact.png"></cover-image>
+  <!-- 搜索列表 -->
+  <cover-view class='listbox'>
+    <cover-view class='topline'></cover-view>
+    <cover-view class='searchlist' wx:for="{{suggestion}}" wx:key="index" bindtap='sureAddr' data-address='{{item.title}}' data-lat='{{item.latitude}}' data-lng='{{item.longitude}}'>
+      <cover-view class='search-item' id="{{index}}">
+        <cover-view class='maintitle'>
+          {{item.title}}
+        </cover-view>
+        <cover-view class='subtitle sc-text ft umar-t ft14'>
+          {{item.addr}}
+        </cover-view>
+        <cover-image class='item-line'></cover-image>
+      </cover-view>
+    </cover-view>
+  </cover-view>
+  <cover-view class='addr-box'>
+    <cover-view class='addr-main'>
+      <cover-view class='addr-txt'>
+        {{curaddr}}
+      </cover-view>
+      <cover-view class='surebtn' bindtap='goback'>
+        确定
+      </cover-view>
+    </cover-view>
+  </cover-view>
+</view>

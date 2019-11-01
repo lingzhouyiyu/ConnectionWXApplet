@@ -1,0 +1,12 @@
+<!--pages/stopaddr/stopaddr.wxml-->
+<view class='um-vp mainpage bc-text'>
+	<navigator class="ub ub-ac addr-box" url='../setaddr/setaddr'>
+		<view class="ub ub-ac ub-f1">
+			{{stopaddr}}
+		</view>
+		<view class="ub ub-ac marl06">
+			<text class="righthead"></text>
+		</view>
+	</navigator> 
+</view>
+

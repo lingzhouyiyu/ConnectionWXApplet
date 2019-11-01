@@ -1,0 +1,2 @@
+/* pages/mapmode/mapmode.wxss */
+.curloact{ position: fixed; right: 10px; top: 48%; width: 30px; height: 30px;}

@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/personal/personal",
+    "pages/order/order",
+    "pages/orderdetail/orderdetail",
+    "pages/setaddr/setaddr",
+    "pages/pickup/pickup",
+    "pages/deliver/deliver",
+    "pages/mapmode/mapmode",
+    "pages/static/static",
+    "pages/stopaddr/stopaddr",
+    "pages/login/login",
+    "pages/tasklist/tasklist"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "来云游将获取你的位置信息"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

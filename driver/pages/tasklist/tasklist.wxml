@@ -1,0 +1,153 @@
+<!--index.wxml-->
+<view class="um-vp mainpage bc-text">
+	<view class="ub topbar">
+		<view class="ub ub-ac ub-pc ub-f1 ub-ver ub-fh">
+			<view class="ub ft18">{{TodayUndertakeOrderNum}}</view>
+			<view class="ub ft14">今日接单</view>
+		</view>
+		<view class="ub ub-ac ub-pc ub-f1 ub-ver ub-fh">
+			<view class="ub ft18">{{TodayFinishOrderNum}}</view>
+			<view class="ub ft14">完成订单</view>
+		</view>
+		<view class="ub ub-ac ub-pc ub-f1 ub-ver ub-fh">
+			<view class="ub ft18">{{TodayIncome}}</view>
+			<view class="ub ft14">今日流水</view>
+		</view>
+		<view class="ub ub-ac ub-pc ub-f1 ub-ver ub-fh">
+			<view class="ub ft18">{{OnLineTimeForMinute}}</view>
+			<view class="ub ft14">在线时长</view>
+		</view>
+		<navigator class="ub ub-ac ub-pc ub-f1 ub-ver ub-fh" url='../personal/personal'>
+			<image class="personal-img" src="../../common/images/personal-bg.png"></image>
+		</navigator>
+	</view>
+	<!--任务列表-->
+	<view class="ub ub-ver tasklist">
+		<view class="ub ub-ver task-item" wx:for="{{orderList}}">
+			<view class="ub ub-f1 task-top">
+				<view class="ub task-bg">
+					<image class="task-img" src="../../common/images/label-bg.png"></image>
+				</view>
+				<view class="ub ub-f1 task-name">{{item.PassengerName}}</view>
+				<view class="ub ub-ac colred" wx:if="{{item.OrderState == -1}}">待确认</view>
+				<view class="ub ub-ac colred" wx:if="{{item.OrderState == 3}}">待完成</view>
+				<view class="ub ub-ac colred" wx:if="{{item.OrderState == 4}}">已拒单</view>
+				<view class="ub ub-ac colred" wx:if="{{item.OrderState == 6}}">已上车</view>
+				<view class="ub ub-ac colred" wx:if="{{item.OrderState == 8}}">已完成</view>
+				<view class="ub ub-ac colred" wx:if="{{item.OrderState == 9}}">已退单</view>
+			</view>
+			<view class="ub ub-ac task-center">
+				<view class="ub ub-f1 ub-ver">
+					<view class="ub ub-ac umar-b">
+						<view class="ub ub-ac green-circle umar-r"></view>
+						<view class="ub ub-f1 ub-ac addr-txt">{{item.StartPointAddress}}</view>
+					</view>
+					<view class="ub ub-ac">
+						<view class="ub ub-ac red-circle umar-r"></view>
+						<view class="ub ub-f1 ub-ac addr-txt">{{item.EndPointAddress}}</view>
+					</view>
+				</view>
+				<view class="ub ub-ac ub-pc ub-ver task-right">
+					<view class="ub ub-ac umar-b" bindtap='lookLoaction' data-startLat='{{item.StartPointCoordinate_Latitude}}' data-startLng='{{item.StartPointCoordinate_Longitude}}' data-endLat='{{item.EndPointCoordinate_Latitude}}' data-endLng='{{item.EndPointCoordinate_Longitude}}' data-staus='{{item.OrderState}}' data-endAddr='{{item.EndPointAddress}}' data-startAddr='{{item.StartPointAddress}}' data-tel='{{item.PassengerMobilPhone}}' data-Id='{{item.Id}}' data-startTime='{{item.DepartureTimeString}}' data-endTime='{{item.ArriveTimeString}}'>
+						<image class="telbg" src="../../common/images/addr-bg.png"></image>
+					</view>
+					<view class="ub ub-ac" bindtap='maketel' data-tel='{{item.PassengerMobilPhone}}'>
+						<image class="telbg" src="../../common/images/telbg.png"></image>
+					</view>
+				</view>
+			</view>
+			<view class="ub ub-ac marb06 task-time">
+				<view class="ub ub-ac umar-r">
+					<image class="ub clcok-bg" src="../../common/images/clock.png"></image>
+				</view>
+				<view class="ub ub-ver">
+					<view class="ub ub-ac">
+						<view class='ub colhgreen umar-r'>起</view>
+						<view class="ub ub-ac ftb">{{item.DepartureTimeString}}</view>
+					</view>
+					<view class="ub ub-ac">
+						<view class='ub colred umar-r'>终</view>
+						<view class="ub ub-ac ftb">{{item.ArriveTimeString}}</view>
+					</view>
+				</view>
+				<!-- <view class='ub colhgreen umar-r'>起</view>
+				<view class="ub ub-ac ftb">{{item.DepartureTime}}</view>
+				<view class='ub ub-ac marl1 sc-text'>|</view>
+				<view class='ub colred umar-r marl1'>终</view>
+				<view class="ub ub-ac ftb">13:00</view> -->
+			</view>
+			<view class="ub ub-ac drive-main">
+				<view class="ub ub-ac umar-r">
+					<image class="ub drive-img" src="../../common/images/personal-bg.png"></image>
+				</view>
+				<view class="ub ub-ac">{{item.HandOverDriverName}}</view>
+				<view class="ub ub-ac" wx:if="{{item.HandOverDriverName == '' || item.HandOverDriverName == null}}">无司机信息</view>
+				<view class="ub ub-f1 ub-pe" bindtap='drivertel' data-tel='{{item.HandOverDriverPhone}}'>
+					<image class="ub drive-tel" src="../../common/images/drive-tel.png"></image>
+				</view>
+			</view>
+			<!-- 待接受任务 -->
+			<view class="ub ub-f1 contral-btn" wx:if="{{item.OrderState == -1}}">
+				<view class="ub ub-ac ub-pc ub-f1 ub-fh sc-text border-r" bindtap='canelorder' data-Id='{{item.Id}}'>取消接客</view>
+				<view class="ub ub-ac ub-pc ub-f1 ub-fh colgloden" bindtap='sureorder' data-Id='{{item.Id}}'>确认接客</view>
+			</view>
+			<!-- 已接收任务 -->
+			<view class="ub ub-f1 contral-btn" wx:if="{{item.OrderState == 3}}">
+				<view class="ub ub-ac ub-pc ub-f1 ub-fh sc-text border-r" bindtap='upcar' data-Id='{{item.Id}}'>已上车</view>
+				<view class="ub ub-ac ub-pc ub-f1 ub-fh colgloden" data-Id='{{item.Id}}'>已下车</view>
+			</view>
+			<!-- 已上车 -->
+			<view class="ub ub-f1 contral-btn" wx:if="{{item.OrderState == 6}}">
+				<view class="ub ub-ac ub-pc ub-f1 ub-fh sc-text border-r" data-Id='{{item.Id}}'>已上车</view>
+				<view class="ub ub-ac ub-pc ub-f1 ub-fh colgloden" bindtap='downcar' data-Id='{{item.Id}}'>已下车</view>
+			</view>
+		</view>
+		
+	</view>
+	<!--暂无任务-->
+  <block  wx:if="{{hasorder == 0}}">
+  <view class='ub ub-ver ub-ac ub-pc nodata-box'>
+    <view>
+      <image class='nodata-img' src='../../common/images/nodata.png'></image>
+    </view>
+    <view class='ub'>
+      <text>当前暂无任务</text>
+    </view>
+  </view>
+  </block>
+	<view class="ub index-footer">
+		<view class="ub ub-ac ub-pc ub-f1 ub-fh bgblack" bindtap='startCar'>出车</view>
+		<navigator class="ub ub-ac ub-pc ub-f1 ub-fh bggloden" url='../mapmode/mapmode'>地图模式</navigator>
+	</view>
+	<!-- 车辆选择弹窗 -->
+	<view class="carmask  {{isRuleTrue?'isRuleShow':'isRuleHide'}}'">
+		<view class='ub ub-f1 ub-ver carmain'>
+			<view class='ub car-top'>
+				<view class='ub ub-ac ub-pc sc-text canel-btn' bindtap='canelmask'>
+					取消
+				</view>
+				<view class='ub ub-ac ub-pc ub-f1'>
+					选择出车车辆
+				</view>
+				<view class='ub ub-ac colgloden check-btn' bindtap='savecar'>
+					确认
+				</view>
+			</view>
+			<view class='ub ub-f1 carlist'>
+				<radio-group class="ub ub-ver ub-f1 item-right radio-group" bindchange="changecar">
+					<view class='ub ub-ac car-item' wx:for="{{items}}">
+						<label class="radio ub-ac ub ub-f1">
+							<radio value='{"carId":"{{item.Id}}","carName":"{{item.VehicleNum}}"}'  checked="{{item.checked}}" class='ub ub-ac marr1' />
+							<text>{{item.VehicleNum}}</text>
+							<text class="sc-text marl06">{{item.VehicleBrandAndModel}}</text>
+						</label>
+					</view>
+				</radio-group>
+			</view>
+		</view>
+	</view>
+	<!-- 新订单弹窗 -->
+	<view class="dhide">
+		<neworder> </neworder>
+	</view>
+</view>

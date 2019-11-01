@@ -1,0 +1,24 @@
+<!--pages/static/static.wxml-->
+<view class='um-vp mainpage bc-text'>
+	<view class="ub static-top">
+		<picker class='ub ub-f1 ub-pe static-box' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+			<text class="umar-r">按月</text>
+			<text class="">{{array[index]}}</text>
+			<text class="triangle_main"></text>
+		</picker>
+	</view>
+	<view class='ub ub-pc ub-ver fix-box'>
+		<view class="ub ub-ac ub-pc umar-b">
+			<text>￥</text><text class="ft18 ftb">0.00</text>
+		</view>
+		<view class="ub ub-ac ub-pc">
+			<text>3</text><text>月总流水</text>
+		</view>
+		<view class="ub ub-ac ub-pc sc-text">
+			<text>共</text><text>0</text><text>单</text>
+		</view>
+	</view>
+	<view class="ub total-charts">
+		<canvas canvas-id="lineCanvas"  bindtouchstart="touchHandler"></canvas>
+	</view>
+</view>

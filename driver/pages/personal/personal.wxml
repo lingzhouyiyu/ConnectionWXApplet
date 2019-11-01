@@ -1,0 +1,92 @@
+<!--pages/personal/personal.wxml-->
+<view class='um-vp mainpage bc-text'>
+	<view class="ub ub-ac personal-top">
+		<view class="ub ub-ac">
+			<image class="header-img" src="../../common/images/header.png"></image>
+		</view>
+		<view class="ub ub-ver">
+			<view class="ub ub-ac umar-b">{{userName}}</view>
+			<view class="ub ub-ac">{{userTel}}</view>
+		</view>
+	</view>
+	<view class="ub ub-pc personal-bar">
+		<view class="ub ub-ac ub-ver ub-pc ub-f1 ub-fh">
+			<view class="ub ub-ac ub-pc ftb ft18">{{TodayIncome}}</view>
+			<view class="ub ub-ac ub-pc ft14">今日收入</view>
+		</view>
+		<view class="ub ub-ac ub-ver ub-pc ub-f1 ub-fh">
+			<view class="ub ub-ac ub-pc ftb ft18">{{TodayOrderNum}}</view>
+			<view class="ub ub-ac ub-pc ft14">今日订单</view>
+		</view>
+		<view class="ub ub-ac ub-ver ub-pc ub-f1 ub-fh">
+			<view class="ub ub-ac ub-pc ftb ft18">{{CurrentMonthIncome}}</view>
+			<view class="ub ub-ac ub-pc ft14">本月收入</view>
+		</view>
+	</view>
+	<view class="ub ub-pc personal-bar personal-bar02">
+		<navigator class="ub ub-ac ub-ver ub-pc ub-f1 ub-fh" url='../order/order'>
+			<view class="ub ub-ac ub-pc">
+				<image class="personbar-img" src="../../common/images/person01.png"></image>
+			</view>
+			<view class="ub ub-ac ub-pc ft14">行程</view>
+	</navigator> 
+		<view class="ub ub-ac ub-ver ub-pc ub-f1 ub-fh">
+			<view class="ub ub-ac ub-pc">
+				<image class="personbar-img" src="../../common/images/person02.png"></image>
+			</view>
+			<view class="ub ub-ac ub-pc ft14">积分</view>
+		</view>
+		<navigator class="ub ub-ac ub-ver ub-pc ub-f1 ub-fh" url='../static/static'>
+			<view class="ub ub-ac ub-pc">
+				<image class="personbar-img" src="../../common/images/person03.png"></image>
+			</view>
+			<view class="ub ub-ac ub-pc ft14">流水</view>
+		</navigator>
+	</view>
+	<view class="ub ub-ac personal-item">
+		<view class="ub ub-ac ub-f1">
+			<text>当前</text><text class="colgloden">车辆</text>
+		</view>
+		<view class="ub ub-ac">{{carName}}</view>
+	</view>
+	<view class="ub ub-ac personal-item dhide">
+		<view class="ub ub-ac ub-f1">
+			夜间接单
+		</view>
+		<view class="ub ub-ac">
+			<switch bindchange="switch2Change" />
+		</view>
+	</view>
+	<navigator class="ub ub-ac personal-item" url='../stopaddr/stopaddr'>
+		<view class="ub ub-ac ub-f1">
+			夜间停车地址
+		</view>
+		<view class="ub ub-ac">
+			<text class="righthead"></text>
+		</view>
+	</navigator>
+	<!--车主助手-->
+	<view class="ub ub-ver helepbox">
+		<view class="ub ub-ac ub-f1 help-top">
+			<view class="ub help-bg"></view>
+			<view class="ub help-txt">车主助手</view>
+		</view>
+		<view class="ub help-list">
+			<view class="ub ub-ac ub-ver ub-f1 ub-fh">
+				<view class="ub">
+					<image class="help-img" src="../../common/images/foot01_active.png"></image>
+				</view>
+				<view class="ub ub-ac">政策规则</view>
+			</view>
+			<view class="ub ub-ac ub-ver ub-f1 ub-fh">
+				<view class="ub">
+					<image class="help-img" src="../../common/images/foot01_active.png"></image>
+				</view>
+				<view class="ub ub-ac">申诉中心</view>
+			</view>
+			<view class="ub ub-ac ub-ver ub-f1 ub-fh">
+				
+			</view>
+		</view>
+	</view>
+</view>

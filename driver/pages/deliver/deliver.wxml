@@ -1,0 +1,52 @@
+<!--pages/deliver/deliver.wxml-->
+<!-- <view bindtap='intoMap'>地址导航</view> -->
+<view class="um-vp bc-text mapHeight">
+	<map id="map" class="map" polyline="{{polyline}}" markers="{{markers}}" include-points="{{markers}}"></map>
+	<cover-view class="ub toptips sc-text">
+		<cover-view class='ub ub-f1 toptipstxt'>
+			请到达约定地点接送乘客
+		</cover-view>
+		<cover-view class='ub telbg-box' bindtap='maketel'>
+			<cover-image class="telbg" src="../../common/images/telbg-02.png"></cover-image>
+		</cover-view>
+	</cover-view>
+  <cover-image class='reload-btn' bindtap='my_location' src='../../common/images/reload.png'></cover-image>
+	<cover-view class="pickup-bottom">
+		<cover-view class="pickup-way colblue">
+			<cover-view class="way-left">
+				{{distance}}公里
+			</cover-view>
+			<cover-view class="way-right">
+				驾车{{drivetime}}分钟
+			</cover-view>
+		</cover-view>
+		<cover-view class="pickup-inforbox">
+			<cover-view class="inforbox-left">
+				<cover-view class='timebox'>
+        <cover-view class='starttime'>10:00</cover-view>
+        <cover-view class='timeline'></cover-view>
+				<cover-view class='endtime'>
+					13:00
+				</cover-view>
+        </cover-view>
+			</cover-view>
+			<cover-view class="addrbox">
+				<cover-view class="addr-item umar-b">
+					<cover-view class='green-circle umar-r'></cover-view>
+					<cover-view class="addr-txt">云南省昆明市五华区高新招</cover-view>
+				</cover-view>
+				<cover-view class="addr-item">
+					<cover-view class="red-circle umar-r"></cover-view>
+					<cover-view class="addr-txt">云南省昆明市五华区高新招商云南省昆明市五华区高新</cover-view>
+				</cover-view>
+			</cover-view>
+		</cover-view>
+		<cover-view class='bottom-box'>
+			<cover-view class="pickup-btn">到达目的地</cover-view>
+			<cover-view class="nav-btn" bindtap="intoMap">
+				<cover-image class='nav-img' src="../../common/images/addr-bg.png"></cover-image>
+				<!-- <cover-view class='nav-txt'>导航</cover-view> -->
+			</cover-view>
+		</cover-view>
+	</cover-view>
+</view>

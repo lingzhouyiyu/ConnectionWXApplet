@@ -1,0 +1,84 @@
+<!--pages/orderdetail/orderdetail.wxml-->
+<view class="um-vp mainpage bc-text">
+	<view class="ub ub-ver ub-pc month-check">
+		<view class="ub ub-ac ub-pc">
+			<picker class="ub ub-ac" style="height: 2em;" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+				<view class="ub picker">
+					<text>{{array[index]}}</text>
+					<text class="bottomhead umar-l"></text>
+				</view>
+			</picker>
+		</view>
+		<view class="ub ub-ac ub-pc ub-f1 time-txt">
+			<text>2019年12月12日</text>
+		</view>
+	</view>
+	<view class="ub ub-ver tasklist">
+		<view class="ub ub-ver task-item">
+			<view class="ub ub-f1 task-top">
+				<view class="ub task-bg">
+					<image class="task-img" src="../../common/images/label-bg.png"></image>
+				</view>
+				<view class="ub ub-f1 task-name">张三丰</view>
+				<view class="ub ub-ac colhgreen">已完成</view>
+			</view>
+			<view class="ub ub-ac task-center">
+				<view class="ub ub-f1 ub-ver">
+					<view class="ub ub-ac umar-b">
+						<view class="ub ub-ac green-circle umar-r"></view>
+						<view class="ub ub-f1 ub-ac addr-txt">云南省昆明市五华区高新招商大厦云南省昆明市五华区高新招商大厦</view>
+						<view class="ub marl06">
+							13:00
+						</view>
+					</view>
+					<view class="ub ub-ac">
+						<view class="ub ub-ac red-circle umar-r"></view>
+						<view class="ub ub-f1 ub-ac addr-txt">云南省昆明市五华区高新招商大厦云南省昆明市五华区高新招商大厦</view>
+						<view class="ub marl06">
+							13:00
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="ub ub-ac  marb06 task-time">
+				<view class="ub ub-ac umar-r">
+					<image class="ub clcok-bg" src="../../common/images/clock.png"></image>
+				</view>
+				<view class="ub ub-ac ftb">13:00</view>
+			</view>
+		</view>
+		<view class="ub ub-ver task-item">
+			<view class="ub ub-f1 task-top">
+				<view class="ub task-bg">
+					<image class="task-img" src="../../common/images/label-bg.png"></image>
+				</view>
+				<view class="ub ub-f1 task-name">张三丰</view>
+				<view class="ub ub-ac sc-text">已撤回</view>
+			</view>
+			<view class="ub ub-ac task-center">
+				<view class="ub ub-f1 ub-ver">
+					<view class="ub ub-ac umar-b">
+						<view class="ub ub-ac green-circle umar-r"></view>
+						<view class="ub ub-f1 ub-ac addr-txt">云南省昆明市五华区高新招商大厦云南省昆明市五华区高新招商大厦</view>
+						<view class="ub marl06">
+							13:00
+						</view>
+					</view>
+					<view class="ub ub-ac">
+						<view class="ub ub-ac red-circle umar-r"></view>
+						<view class="ub ub-f1 ub-ac addr-txt">云南省昆明市五华区高新招商大厦云南省昆明市五华区高新招商大厦</view>
+						<view class="ub marl06">
+							13:00
+						</view>
+					</view>
+				</view>
+			</view>
+			<view class="ub ub-ac  marb06 task-time">
+				<view class="ub ub-ac umar-r">
+					<image class="ub clcok-bg" src="../../common/images/clock.png"></image>
+				</view>
+				<view class="ub ub-ac ftb">13:00</view>
+			</view>
+		</view>
+	</view>
+</view>

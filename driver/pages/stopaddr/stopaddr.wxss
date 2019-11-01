@@ -1,0 +1,4 @@
+/* pages/stopaddr/stopaddr.wxss */
+@import '../../common/css/common.wxss';
+page{ background: #f2f6ff;}
+.addr-box{ margin-top: 0.6em; background: #fff; padding: 0.8em 0.6em;}

@@ -1,0 +1,25 @@
+<!--common/components/neworder.wxml-->
+<!-- 新订单弹窗 -->
+	<view class="ub ub-ac ub-pc neworder-mask {{isOrderTrue?'isRuleShow':'isRuleHide'}}'">
+		<view class="ub ub-f1 ub-ver newmask-main">
+			<view class="ub ub-ac ub-pc circle-top">
+				<view class="ub ub-ac ub-pc news-circle">新</view>
+			</view>
+			<view class="ub ub-ver ub-pc circle-way">
+				<view class="ub ub-ac umar-b">
+					<view class="ub ub-ac green-circle umar-r"></view>
+					<view class="ub ub-f1 ub-ac addr-txt">云南省昆明市五华区高新招商大厦</view>
+					<view class='ub ub-ac'>13:20</view>
+				</view>
+				<view class="ub ub-ac">
+					<view class="ub ub-ac red-circle umar-r"></view>
+					<view class="ub ub-f1 ub-ac addr-txt">云南省昆明市五华区高新招商大厦</view>
+					<view class='ub ub-ac'>14:20</view>
+				</view>
+			</view>
+			<view class="ub new-bottom">
+				<view class="ub ub-ac ub-pc ub-fh ub-f1 border-r" bindtap='canelneworder'>取消</view>
+				<view class="ub ub-ac ub-pc ub-fh ub-f1 colgloden" bindtap='acceptorder'>确认</view>
+			</view>
+		</view>
+	</view>

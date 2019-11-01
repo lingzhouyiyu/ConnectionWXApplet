@@ -1,0 +1,17 @@
+/* pages/orderdetail/orderdetail.wxss */
+@import '../../common/css/common.wxss';
+page{ background: #f2f6ff;}
+.month-check{ background: #fff; position: fixed; left: 0; top: 0; height: 3.8em; width: 100%; z-index: 999}
+.time-txt{ height: 1em; background: #f2f6ff; height: 1em;}
+.tasklist{ padding: 4em 0.6em 0.6em 0.6em;}
+.task-img{ width: 26px; height: 26px;}
+.task-item{ background: #fff; box-shadow:2px 2px 3px #aaaaaa; border-radius: 6px; margin-bottom: 0.8em;}
+.task-top{ border-bottom: 1px solid #e1e1e1; padding: 0 0.6em; }
+.task-name{ padding: 0.6em;}
+.task-center{ padding: 0.6em; }
+.green-circle{ background: #00CC66; width: 10px; height: 10px; border-radius: 50%; }
+.red-circle{ background: #ff8033; width: 10px; height: 10px; border-radius: 50%;}
+.telbg{ width: 30px; height: 30px;}
+.task-right{ padding-left: 0.6em;}
+.clcok-bg{ width: 20px; height: 20px;}
+.task-time{ padding: 0 0.6em;}

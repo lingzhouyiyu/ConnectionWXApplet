@@ -1,0 +1,57 @@
+/**index.wxss**/
+@import '../../common/css/common.wxss';
+page{ background: #f2f6ff;}
+.topbar{ background: #fff;height: 60px;}
+.personal-img{ width:28px; height: 28px;}
+.tasklist{ padding: 0.6em; padding-bottom: 3.5em;}
+.task-img{ width: 26px; height: 26px;}
+.task-item{ background: #fff; box-shadow:2px 2px 3px #aaaaaa; border-radius: 6px; margin-bottom: 0.8em;}
+.task-top{ border-bottom: 1px solid #e1e1e1; padding: 0 0.6em; }
+.task-name{ padding: 0.6em;}
+.task-center{ padding: 0.6em 0.6em 0 0.6em; }
+.green-circle{ background: #00CC66; width: 10px; height: 10px; border-radius: 50%; }
+.red-circle{ background: #ff8033; width: 10px; height: 10px; border-radius: 50%;}
+.telbg{ width: 30px; height: 30px;}
+.task-right{ padding-left: 0.6em;}
+.clcok-bg{ width: 20px; height: 20px;}
+.contral-btn{ height: 2.8em; border-top: 1px solid #E1E1E1;}
+.task-time{ padding: 0 0.6em;}
+.index-footer{ height: 3em; position: fixed; left: 0; bottom: 0; width: 100%; color: #fff;}
+.bgblack{ background: #3e445a;}
+.bggloden{ background: #ff8033;}
+.carmask{ position: fixed; left: 0; bottom: 0; width: 100%; background: rgba(0, 0, 0, 0.4); height: 100%; overflow: hidden;}
+.carmain{ background: #fff; position: absolute; left: 0; bottom: 0; width: 100%;  min-height: 40%;}
+.car-top{ background: #f5f5f5; height: 2.6em}
+.canel-btn{ height: 2.6em; width: 4em;}
+.check-btn{  height: 2.6em; width: 4em;}
+.radio-img{ width: 1.4em; height: 1.4em;}
+.car-item{ height: 3em; padding: 0 0.6em; border-bottom: 1px solid #e1e1e1;}
+.nodata-box{ padding-top: 80px}
+.nodata-img{width: 180px; height: 160px; margin-bottom: 20px }
+.drive-main{ padding:0 0.6em 0.6em 0.6em;}
+.drive-img{ width: 1.2em; height: 1.2em;}
+.drive-tel{width: 30px; height: 30px;}
+/* 自定义 radio 样式 */
+radio{
+    width: 48rpx;
+     height: 2.6em
+}
+ 
+radio .wx-radio-input{
+    border-radius: 50%; 
+    width: 38rpx;
+    height: 38rpx;
+}
+ 
+/* 选中后的样式 （可根据设计稿需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked::before{
+    border-radius: 50%;
+    width: 54rpx; 
+    height: 54rpx; 
+    line-height: 54rpx;
+    text-align: center;
+    font-size: 30rpx; /* 对勾大小 26rpx */
+    color:#fff; /* 对勾颜色 */
+    background: #00CC66;
+    border-color: #00CC66;
+}

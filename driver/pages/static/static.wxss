@@ -1,0 +1,15 @@
+/* pages/static/static.wxss */
+@import '../../common/css/common.wxss';
+page{ background: #f2f6ff; }
+.static-top{ background: #3d4359;  width: 100%; height: 10em; color: #fff}
+.static-box{ padding: 0.6em}
+.triangle_main{
+    width:0;
+    height:0;
+    border-width:8px 8px 0;
+    border-style:solid;
+    border-color:#fff transparent transparent;
+    display: inline-block
+}
+.fix-box{ background: #fff; border-radius: 5px;margin: -4em 0.6em 0 0.6em; height: 8em; box-shadow:2px 2px 3px #aaaaaa; margin-bottom: 2em;}
+.total-charts canvas{ width: 640px; height: 300px; background: #fff;}

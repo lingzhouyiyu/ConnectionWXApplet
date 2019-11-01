@@ -1,0 +1,23 @@
+<!--pages/login/login.wxml-->
+<view class="um-vp mainpage bc-text">
+  <view class='ub ub-ac ub-pc login-logo'>
+    <image class='logo-img' src='../../common/images/foot01_active.png'></image>
+  </view>
+  <view class='ub put-item'>
+    <view class='ub ub-ac umar-l umar-r put-left'>用户名</view>
+    <view class='ub right-line'></view>
+    <view class='ub ub-f1 uinput ub-ac'>
+      <input type='text' class='username' style='padding-left: 10px; padding-right: 10px;'></input>
+    </view>
+  </view>
+  <view class='ub put-item'>
+    <view class='ub ub-ac umar-l umar-r put-left'>密码</view>
+    <view class='ub right-line'></view>
+    <view class='ub ub-f1 uinput ub-ac'>
+      <input type="text" password="true" class='username' style='padding-left: 10px; padding-right: 10px;'></input>
+    </view>
+  </view>
+  <view class='ub ub-ac ub-pc btn-box'>
+    <view class='ub ub-ac ub-pc ub-f1 login-btn'>登录</view>
+  </view>
+</view>

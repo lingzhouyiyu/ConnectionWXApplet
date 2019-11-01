@@ -1,0 +1,11 @@
+/* pages/login/login.wxss */
+@import '../../common/css/common.wxss';
+.login-logo{ padding: 2em 0}
+.logo-img{ width: 60px; height: 60px}
+.put-item{ margin: 0 1.5em 1.5em 1.5em; border: 1px solid #e1e1e1; border-radius: 5px; padding: 0 0.5em}
+.right-line{ width: 1px; background: #e1e1e1}
+.put-left{ width: 3em}
+.btn-box{ padding: 2em 1.5em}
+.login-btn{ height: 2.8em; background: #07c160; color: #fff; border-radius: 5px}
+.nodata-box{ padding-top: 80px}
+.nodata-img{width: 180px; height: 160px; margin-bottom: 20px }
